@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function Joke() {
   const router = useRouter();
   const { id } = router.query;
+  console.log("FRONTEDN", id);
 
   const { data, isLoading } = useSWR(`/api/jokes/${id}`);
 
